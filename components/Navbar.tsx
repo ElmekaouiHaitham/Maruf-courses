@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { Link } from "react-scroll/modules";
 
 class NavItem {
   label: string;
@@ -54,21 +53,14 @@ export default function Navbar() {
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {NAV_ITEMS.map((item, index) => {
                 return (
-                  <Link
+                  <a
                     key={index}
-                    to={item.page}
                     className={
                       "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 hover:cursor-pointer"
                     }
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavbar(!navbar)}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 );
               })}
               {currentTheme === "dark" ? (
