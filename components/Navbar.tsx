@@ -17,10 +17,9 @@ class NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  new NavItem("Accueil", "home"),
-  new NavItem("À propos", "about"),
-  new NavItem("Projets", "projects"),
-  new NavItem("Contact", "contact"),
+  new NavItem("Courses", "courses"),
+  new NavItem("tab 2", "tab2"),
+  new NavItem("tab 3", "tab 3"),
 ];
 
 export default function Navbar() {
@@ -34,7 +33,8 @@ export default function Navbar() {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <div className="container flex items-center space-x-2">
-              <h2 className="text-2xl font-bold">Bienvenue</h2>
+              <h2 className="text-2xl font-bold">Maruf-courses
+              </h2>
             </div>
             <div className="md:hidden">
               <button
@@ -48,9 +48,8 @@ export default function Navbar() {
         </div>
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "flex" : "hidden"
-            }`}
+            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "flex" : "hidden"
+              }`}
           >
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {NAV_ITEMS.map((item, index) => {
